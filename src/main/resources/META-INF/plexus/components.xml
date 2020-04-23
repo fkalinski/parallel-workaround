@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component-set>
+  <components>
+    <component>
+      <role>org.apache.maven.project.ProjectBuilder</role>
+      <role-hint>default</role-hint>
+      <implementation>com.syncron.maven.parallel.workaround.MavenProjectThreadLocalCloningProjectBuilder</implementation>
+      <description />
+      <isolated-realm>false</isolated-realm>
+      <requirements>
+        <requirement>
+          <role>org.codehaus.plexus.logging.Logger</role>
+          <role-hint/>
+          <field-name>logger</field-name>
+        </requirement>
+        <requirement>
+          <role>org.apache.maven.model.building.ModelBuilder</role>
+          <role-hint/>
+          <field-name>modelBuilder</field-name>
+        </requirement>
+        <requirement>
+          <role>org.apache.maven.model.building.ModelProcessor</role>
+          <role-hint/>
+          <field-name>modelProcessor</field-name>
+        </requirement>
+        <requirement>
+          <role>org.apache.maven.project.ProjectBuildingHelper</role>
+          <role-hint/>
+          <field-name>projectBuildingHelper</field-name>
+        </requirement>
+        <requirement>
+          <role>org.apache.maven.bridge.MavenRepositorySystem</role>
+          <role-hint/>
+          <field-name>repositorySystem</field-name>
+        </requirement>
+        <requirement>
+          <role>org.eclipse.aether.RepositorySystem</role>
+          <role-hint/>
+          <field-name>repoSystem</field-name>
+        </requirement>
+        <requirement>
+          <role>org.eclipse.aether.impl.RemoteRepositoryManager</role>
+          <role-hint/>
+          <field-name>repositoryManager</field-name>
+        </requirement>
+        <requirement>
+          <role>org.apache.maven.project.ProjectDependenciesResolver</role>
+          <role-hint/>
+          <field-name>dependencyResolver</field-name>
+        </requirement>
+      </requirements>
+    </component>
+  </components>
+</component-set>
